@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: laravel-app1
+  name: laravel-app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: laravel-app1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: laravel-app1
+    spec:
+      containers:
+      #- image: mdjakir/laravel_app1:v1
+      - image: mdjakir/laravel-app1:v2
+        name: laravel-app1-4hwqs
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        hostname: k8s-worker1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: laravel-app1
+  name: laravel-svc
+spec:
+  ports:
+  - port: 8000
+    protocol: TCP
+    targetPort: 8000
+    nodePort: 32010
+  selector:
+    app: laravel-app1
+  type: NodePort
