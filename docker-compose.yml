@@ -1,0 +1,15 @@
+version: '3'
+services:
+    laravel_project:
+        container_name: laravel-app1
+        image: 'laravel_app1:v2'
+        environment:
+          - TZ=Asia/Dhaka
+        ports:
+          - "8010:8000"
+        restart: always
+        build:
+            context: "./"
+            dockerfile: "Dockerfile"
+        volumes: 
+          - ./data:/app
