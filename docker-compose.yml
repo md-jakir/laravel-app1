@@ -6,7 +6,7 @@ services:
         environment:
           - TZ=Asia/Dhaka
         ports:
-          - "8010:8000"
+          - "8000:8000"
         restart: always
         build:
             context: "./"
