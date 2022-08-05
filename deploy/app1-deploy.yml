@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       #- image: mdjakir/laravel_app1:v1
-      - image: devopsibcs/laravel-app1:${TAG_NAME}
+      - image: mdjakir/laravel-app1:${TAG_NAME}
         name: laravel-app1-4hwqs
         ports:
         - containerPort: 8000
