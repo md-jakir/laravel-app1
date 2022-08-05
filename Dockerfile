@@ -1,7 +1,7 @@
 FROM php:7.4-fpm-alpine
 
 ENV \
-  APP_DIR="/app" \
+  APP_DIR="/src" \
   APP_PORT="8000"
 
 RUN docker-php-ext-install pdo pdo_mysql sockets
