@@ -10,9 +10,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-COPY . .
-WORKDIR $APP_DIR
 
+WORKDIR $APP_DIR
+COPY . .
 RUN composer install
 
 CMD php artisan serve --host=0.0.0.0 --port=$APP_PORT
