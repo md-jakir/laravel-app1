@@ -16,7 +16,7 @@ And create a app1.blad.php file as followkng in resources/views location
 
 Here, first portion of the blad.php file called app1 should match with route /app1. 
 # Build image and push: 
-When I done then create Dockerfile and docker compose file to build the image. 
+When I done then create Dockerfile and docker compose file to build the image. To build the image and push to docker hub I use jenkins pipeline. To do this need to install neccessary plugins first in jenkins. I'll get docker.build, docker.withRegistry options when we install docker plugins in jenkins. 
 
 
 
