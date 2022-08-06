@@ -19,7 +19,7 @@ Here, first portion of the blad.php file called app1 should match with route /ap
 When I done then create Dockerfile and docker compose file to build the image. To build the image and push to docker hub I use jenkins pipeline. To do this need to install neccessary plugins first in jenkins. I'll get docker.build, docker.withRegistry options when we install docker plugins in jenkins. With jenksing pipline I build image and push to my docker hub and tagging the image with ${BUILD_NUBMER} jenkins variable. I create a jenkins credential using docker hub username and password to access the docker hub for pushing image.
 
 # Deploying in Kubernetes Cluster:
-To deploy the image create a deployment manifest file and adding deploy stage in jenkins pipeline. First I need to install kubernetes, kubernetes-cli, kubernetes credential and other supported plugins. For this stage need to create another jenkins creadentail for accessing kubernetes endpoint. To create this credential I use kube config file as a authentication and use this credential ID in pipiline syntax. 
+To deploy the image create a deployment manifest file and adding deploy stage in jenkins pipeline. First I need to install kubernetes, kubernetes-cli, kubernetes credential and other supported plugins. For this stage need to create another jenkins creadentail for accessing kubernetes endpoint. To create this credential I use kube config file as a authentication and use this credential ID in pipeline syntax. 
 
 
 
